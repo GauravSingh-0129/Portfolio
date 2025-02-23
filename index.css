@@ -1,0 +1,651 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "SourceSans";
+  line-height: 1.6;
+  background-color: #d1d1d1;
+  color: #191818;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #191818;
+  color: #d1d1d1;
+  padding: 20px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: inline-block;
+}
+
+nav .nav-links {
+  list-style: none;
+  float: right;
+}
+
+nav .nav-links li {
+  display: inline;
+  margin-left: 20px;
+}
+
+nav .nav-links li a {
+  color: #d1d1d1;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+nav .nav-links li a:hover {
+  background-color: #4e524a;
+  border-radius: 5px;
+}
+
+.accent-color {
+  color: #04e762;
+}
+
+/* ABOUT Section */ /* ABOUT Section */ /* ABOUT Section */ /* ABOUT Section */
+/* ABOUT Section */ /* ABOUT Section */ /* ABOUT Section */ /* ABOUT Section */
+#about {
+  background: url("images/coverPng.png") no-repeat center center/cover; /* Background image */
+  margin-top: 70px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#about .container {
+  width: 100%; /* Make the container take full width */
+  position: relative;
+  min-height: 250px;
+  padding: 40px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+
+.about-row-name {
+  display: flex;
+  justify-content: left;
+  gap: 30px;
+  color: #d1d1d1;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.about-column {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.about-2 {
+  flex: 60%; /* This column takes 60% of the width */
+  text-align: justify;
+  display: flex;
+  align-items: right;
+}
+
+/* Font Family */
+@font-face {
+  font-family: "SourceSans";
+  src: url("scripts/SourceSansPro-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SourceSerif";
+  src: url("scripts/SourceSerif4-VariableFont_opsz\,wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Tangerine";
+  src: url("scripts/Tangerine-Regular.ttf") format("truetype");
+}
+
+#about h2 {
+  font-size: 4rem;
+  font-family: "SourceSans";
+  margin-top: 40px;
+  line-height: 0.9;
+}
+
+.name {
+  font-size: 4rem;
+  font-family: "SourceSans";
+  color: #d1d1d1;
+}
+
+.bold {
+  color: #d1d1d1;
+}
+
+#about p {
+  word-spacing: 12px;
+  letter-spacing: 1px;
+  font-family: "SourceSans";
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #d1d1d1;
+}
+
+.name-column {
+  flex: 50%; /* Name takes 50% width */
+  display: flex;
+  justify-content: flex-start; /* Left-align content horizontally */
+  align-items: flex-start; /* Align content to the top vertically */
+}
+
+.job-column {
+  flex: 50%; /* Job role takes 50% width */
+  display: flex;
+  justify-content: flex-start; /* Left-align content horizontally */
+  align-items: flex-start; /* Align content to the top vertically */
+  padding-left: 0; /* Remove any left padding */
+  margin-left: -13%; /* Remove any left margin (if previously applied) */
+}
+
+.describe-row {
+  width: 100%; /* Ensure it takes full width */
+  justify-content: flex-end;
+  margin-top: 30px; /* Add some spacing to separate it from the previous section */
+  padding-left: 45%;
+}
+
+.about-social {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  display: flex;
+  gap: 15px;
+  height: 20%;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 50px;
+  border-radius: 10%;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.facebook {
+  background-color: #64fca3;
+  color: #191818;
+}
+
+.instagram {
+  background-color: #9efdc6;
+  color: #191818;
+}
+
+.linkedin {
+  background-color: #2bfb81;
+  color: #191818;
+}
+
+.github {
+  background-color: #04e762;
+  color: #191818;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #d1d1d1;
+}
+
+.social-icon i {
+  font-size: 1.2rem;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  #about .about-row-name {
+    flex-direction: column; /* Stack name and job role on smaller screens */
+    align-items: center;
+  }
+
+  #about .about-column {
+    padding: 15px;
+  }
+
+  .about-2 {
+    flex: 100%; /* Make about-2 take the full width on smaller screens */
+  }
+
+  /* Adjust Social Media Section */
+  .about-social {
+    position: static;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+}
+
+/* PROFESSIONAL Section */ /* PROFESSIONAL Section */ /* PROFESSIONAL Section */ /* PROFESSIONAL Section */
+/* PROFESSIONAL Section */ /* PROFESSIONAL Section */ /* PROFESSIONAL Section */ /* PROFESSIONAL Section */
+#work {
+  padding: 60px 20px;
+  background-color: #191818;
+  text-align: center;
+}
+
+#work .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #d1d1d1;
+}
+
+#work .container h2 {
+  font-size: 3rem;
+}
+
+#work h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.work-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.work-card {
+  background-color: #d1d1d1;
+  padding: 20px;
+  width: 350px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the text color from its parent */
+}
+
+.work-card h3 {
+  color: #191818;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.work-card p {
+  color: #191818;
+  font-size: 1.2rem;
+}
+
+.work-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Adjust layout for small screens */
+@media screen and (max-width: 768px) {
+  .work-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-card {
+    width: 90%;
+    margin: 10px 0;
+  }
+}
+
+/* PROJECTS Section */ /* PROJECTS Section */ /* PROJECTS Section */ /* PROJECTS Section */
+/* PROJECTS Section */ /* PROJECTS Section */ /* PROJECTS Section */ /* PROJECTS Section */
+#projects {
+  padding: 60px 20px;
+  background-color: #191818;
+  text-align: center;
+  color: #d1d1d1;
+}
+
+#projects .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#projects .container h2 {
+  font-size: 3rem;
+  color: #d1d1d1;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#projects .hyperlinks-stars {
+  margin-right: -10%;
+  margin-top: 40px;
+  color: #d1d1d1;
+  text-align: right;
+  font-size: 1.5em;
+}
+
+.project-card {
+  background-color: #d1d1d1;
+  padding: 20px;
+  width: 280px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the text color from its parent */
+}
+
+.project-card h3 {
+  color: #191818;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #191818;
+  font-size: 1.2rem;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Adjust layout for small screens */
+@media screen and (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+    margin: 10px 0;
+  }
+}
+
+/* CAREER TIMELINE Section */ /* CAREER TIMELINE Section */ /* CAREER TIMELINE Section */ /*CAREER  TIMELINE Section */
+/* CAREER TIMELINE Section */ /* CAREER TIMELINE Section */ /* CAREER TIMELINE Section */ /* CAREER TIMELINE Section */
+
+#career-timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 70px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#career-timeline .container {
+  width: 100%;
+}
+
+#career-timeline .container h2 {
+  font-size: 3rem;
+  color: #191818;
+}
+
+#career-timeline h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.career-timeline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Vertical line in the middle */
+.career-timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 2px;
+  background-color: #191818;
+  z-index: -1;
+}
+
+/* SKILL TIMELINE Section */ /* SKILL TIMELINE Section */ /* SKILL TIMELINE Section */ /* SKILL TIMELINE Section */
+/* SKILL TIMELINE Section */ /* SKILL TIMELINE Section */ /* SKILL TIMELINE Section */ /* SKILL TIMELINE Section */
+
+#skill-timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: 70px;
+  text-align: center;
+}
+
+#skill-timeline .container {
+  width: 100%;
+}
+
+#skill-timeline .container h2 {
+  font-size: 3rem;
+  color: #191818;
+}
+
+#skill-timeline h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.skill-timeline-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+/* Vertical line in the middle */
+.skill-timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 2px;
+  background-color: #191818;
+  z-index: -1;
+}
+
+/* COMMON TIMELINE Section */ /* COMMON TIMELINE Section */ /* COMMON TIMELINE Section */ /* COMMON TIMELINE Section */
+/* COMMON TIMELINE Section */ /* COMMON TIMELINE Section */ /* COMMON TIMELINE Section */ /* COMMON TIMELINE Section */
+.branch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0;
+  position: relative;
+  width: 100%;
+}
+
+.branch-left,
+.branch-right {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+}
+
+.branch-left {
+  text-align: left;
+  padding-right: 20px;
+}
+
+.branch-right {
+  text-align: right;
+  padding-left: 20px;
+}
+
+/* Align left side boxes from right end and right side boxes from left end */
+.branch-left .branch-end {
+  left: 100%; /* Push the box to the right of the line */
+  max-width: 350px;
+  justify-content: center;
+}
+
+.branch-right .branch-end {
+  right: 100%; /* Push the box to the left of the line */
+  max-width: 350px;
+  justify-content: center;
+}
+
+/* Ensure boxes start at the end of the horizontal lines */
+.branch-left::before,
+.branch-right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50%; /* Adjust the width */
+  height: 2px;
+  background-color: #191818;
+  z-index: -1;
+  transform: translateY(-50%);
+}
+
+.branch-left::before {
+  right: 0; /* Start the line from the right side of the center */
+}
+
+.branch-right::before {
+  left: 0; /* Start the line from the left side of the center */
+}
+
+.branch-end {
+  position: relative;
+  padding: 10px 20px;
+  background-color: #191818;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  text-align: center;
+}
+
+.date {
+  color: #d1d1d1;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.branch-left .date {
+  order: -1;
+}
+
+.branch-right .date {
+  order: 1;
+  margin-left: 10px;
+}
+
+.text {
+  font-size: 1rem;
+  color: #d1d1d1;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* CONTACT Section */ /* CONTACT Section */ /* CONTACT Section */ /* CONTACT Section */
+/* CONTACT Section */ /* CONTACT Section */ /* CONTACT Section */ /* CONTACT Section */
+#contact {
+  padding: 60px 20px;
+  background-color: #191818;
+  text-align: center;
+}
+
+#contact .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #d1d1d1;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #d1d1d1;
+}
+
+#contact input,
+#contact textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #191818;
+  font-size: 1rem;
+}
+
+#contact button {
+  padding: 10px 20px;
+  background-color: #04e762;
+  color: #191818;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: #d1d1d1;
+}
+
+/* Responsive Form */
+@media screen and (max-width: 768px) {
+  #contact form {
+    width: 100%;
+  }
+
+  #contact button {
+    width: 100%;
+  }
+}
